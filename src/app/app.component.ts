@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./header/header.component";
+import {NavbarComponent} from "./navbar/navbar.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   template: `
-    <main>
+    <main class="bg-demo-shadow w-full h-full">
       <app-header></app-header>
-      <section class="content">
-        <app-home></app-home>
-      </section>
+      <app-navbar></app-navbar>
     </main>
   `,
-  imports: [HomeComponent, HeaderComponent]
+  imports: [HeaderComponent, NavbarComponent]
 
 })
 export class AppComponent {
