@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from "./home/home.component";
+import { HeaderComponent } from "./header/header.component";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <main>
+      <app-header></app-header>
+      <section class="content">
+        <app-home></app-home>
+      </section>
+    </main>
+  `,
+  imports: [HomeComponent, HeaderComponent]
+
 })
 export class AppComponent {
   title = 'angular-demo';
