@@ -13,7 +13,7 @@ import {NgForOf} from "@angular/common";
   ],
   template: `
     <div
-      class="flex flex-col gap-3 w-1/5 min-w-40 max-w-60 h-full min-h-screen py-6 px-2 border-r-2 border-demo-border text-demo-grey text-xs lg:text-xl">
+      class="min-w-48 max-w-56 mr-2 flex flex-col gap-3 h-full min-h-screen py-6 px-2 border-r-2 border-demo-border text-demo-grey text-xs lg:text-base">
       <app-nav-item *ngFor="let navItem of navItemList" [navItem]="navItem"
                     [isSelected]="selectedOption === navItem.name"
                     (optionSelected)="onOptionSelected($event)"></app-nav-item>
@@ -25,7 +25,6 @@ import {NgForOf} from "@angular/common";
       <app-nav-item *ngFor="let navItem of settingList" [navItem]="navItem"
                     [isSelected]="selectedOption === navItem.name"
                     (optionSelected)="onOptionSelected($event)"></app-nav-item>
-
     </div>
   `
 })
@@ -65,7 +64,7 @@ export class NavbarComponent {
     },
   ]
 
-  selectedOption: string = 'customers';
+  selectedOption: string = 'categories';
 
 
   otherInfoList = [
